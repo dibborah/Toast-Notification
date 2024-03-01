@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+</head>
+<body>
+
+    <div class="buttons">
+        <button onClick="showMessage('Success')">Success</button>
+        <button onClick="showMessage('Error')">Error</button>
+        <button onClick="showMessage('Invalid')">Invalid</button>
+    </div>
+
+    <div id="toast"></div>
+
+    <script>
+        function showMessage(msg){
+            // const toast = document.createElement("div");
+            // toast.classList.add("toast");
+            // toast.innerHTML = 'success';
+            const toast = document.getElementById("toast");
+            toast.innerHTML = msg;
+        }
+    </script>
+</body>
+</html>
