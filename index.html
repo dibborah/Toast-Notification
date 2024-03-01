@@ -3,23 +3,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toast Notification</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="buttons">
-        <button onClick="showMessage('Success')">Success</button>
-        <button onClick="showMessage('Error')">Error</button>
-        <button onClick="showMessage('Invalid')">Invalid</button>
+        <button onClick="showToast('Success')">Success</button>
+        <button onClick="showToast('Error')">Error</button>
+        <button onClick="showToast('Invalid')">Invalid</button>
     </div>
 
-    <div id="toast"></div>
+    <div id="toastBox"></div>
 
     <script>
-        function showMessage(msg){
-            // const toast = document.createElement("div");
-            // toast.classList.add("toast");
-            // toast.innerHTML = 'success';
-            const toast = document.getElementById("toast");
+        function showToast(msg){
+            const toast = document.createElement("div");
+            toast.classList.add("toast");
+            // const toast = document.getElementById("toast");
+            // toast.appendChild
             toast.innerHTML = msg;
         }
     </script>
